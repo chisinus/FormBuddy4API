@@ -6,12 +6,24 @@ MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBSharedLibrary", "FBSharedLibrary\FBSharedLibrary.csproj", "{A10C9380-1068-4EB0-8D8B-5F0EFD2FCDE9}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBGateway", "FBGateway\FBGateway.csproj", "{3C472F8A-2888-4211-A806-75D4D3CA6D0D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A10C9380-1068-4EB0-8D8B-5F0EFD2FCDE9} = {A10C9380-1068-4EB0-8D8B-5F0EFD2FCDE9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBUserApi", "FBUserApi\FBUserApi.csproj", "{165C44D6-69F6-44A2-BA95-0CDA7FE7C3E3}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3C472F8A-2888-4211-A806-75D4D3CA6D0D} = {3C472F8A-2888-4211-A806-75D4D3CA6D0D}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBProjectApi", "FBProjectApi\FBProjectApi.csproj", "{F1355A6A-6379-4A20-9539-D717E4935C98}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A10C9380-1068-4EB0-8D8B-5F0EFD2FCDE9} = {A10C9380-1068-4EB0-8D8B-5F0EFD2FCDE9}
+	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FBCompanyApi", "FBCompanyApi\FBCompanyApi.csproj", "{9A83918A-2B80-4884-B387-5A9DFE8A028D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A10C9380-1068-4EB0-8D8B-5F0EFD2FCDE9} = {A10C9380-1068-4EB0-8D8B-5F0EFD2FCDE9}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

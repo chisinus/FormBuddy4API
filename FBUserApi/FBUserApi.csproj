@@ -13,4 +13,12 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="DAL\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\FBSharedLibrary\FBSharedLibrary.csproj" />
+  </ItemGroup>
+
 </Project>
