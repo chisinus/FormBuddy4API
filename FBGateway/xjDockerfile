@@ -2,12 +2,15 @@
 
 FROM mcr.microsoft.com/dotnet/aspnet:6.0 AS base
 WORKDIR /app
+
+ENV ASPNETCORE_URLS http://+:80
 EXPOSE 80
-EXPOSE 443
+#EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["FBGateway/FBGateway.csproj", "FBGateway/"]
+#COPY ["FBGateway/FBGateway.csproj", "FBGateway/"]
+COPY ["FBGateway.csproj", "FBGateway/"]
 RUN dotnet restore "FBGateway/FBGateway.csproj"
 COPY . .
 WORKDIR "/src/FBGateway"
