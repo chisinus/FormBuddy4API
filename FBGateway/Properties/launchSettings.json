@@ -11,12 +11,10 @@
   "profiles": {
     "FBGateway": {
       "commandName": "Project",
-      "launchBrowser": true,
-      "launchUrl": "swagger",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       },
-      "applicationUrl": "https://localhost:7005;http://localhost:5005",
+      "applicationUrl": "http://localhost:20010",
       "dotnetRunMessages": true
     },
     "IIS Express": {
@@ -26,13 +24,12 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
-    },
-    "Docker": {
-      "commandName": "Docker",
-      "launchBrowser": true,
-      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
-      "publishAllPorts": true,
-      "useSSL": true
     }
+    //"Docker": {
+    //  "commandName": "Docker",
+    //  "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+    //  "publishAllPorts": true,
+    //  "useSSL": true
+    //}
   }
 }

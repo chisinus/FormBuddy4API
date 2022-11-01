@@ -1,0 +1,4 @@
+﻿ENVIRONMENT = Development
+UserServiceUrl = http://localhost:40011
+CompanyServiceUrl = http://localhost:40012
+ProjectServiceUrl = http://localhost:40013
