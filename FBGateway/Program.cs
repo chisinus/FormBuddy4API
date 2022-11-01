@@ -20,20 +20,7 @@ builder.Services.AddCors(options =>
     options.AddDefaultPolicy(
         policy =>
         {
-            //policy.WithOrigins("http://localhost:4200",
-            //                    "http://www.test.com");
             policy.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
-        });
-});
-
-// enasble CORS
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(
-        policy =>
-        {
-            policy.WithOrigins("http://localhost:4200",
-                                "http://www.test.com");
         });
 });
 
