@@ -16,12 +16,12 @@ namespace FBDAL.Entities
         }
 
         public int UserId { get; set; }
-        public string? Username { get; set; }
+        public string Username { get; set; }
         public string Firstname { get; set; } = null!;
         public string Lastname { get; set; } = null!;
         public string Password { get; set; } = null!;
         public string PasswordSand { get; set; } = null!;
-        public int? GenderTypeId { get; set; }
+        public int GenderTypeId { get; set; }
         public int StatusId { get; set; }
         public int SecurityQuestionId { get; set; }
         public string SecurityQuestionAnswer { get; set; } = null!;
