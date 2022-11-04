@@ -8,7 +8,7 @@ namespace FBSharedLibrary.Models
 {
     public class UserBasic : T
     {
-        public string UserName { get; set; }
+        public string Username { get; set; }
         public string Firstname { get; set; }
         public string Lastname { get; set; }
     }

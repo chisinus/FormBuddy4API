@@ -8,7 +8,7 @@ namespace FBUserApi.Services
         {
             UserBasic result = new UserBasic()
             {
-                UserName = "username",
+                Username = "username",
                 Firstname = "firstname",
                 Lastname = "lasname"
             };

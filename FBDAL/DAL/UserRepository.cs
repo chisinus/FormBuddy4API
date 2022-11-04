@@ -26,9 +26,9 @@ namespace FBDAL.DAL
             return (user == null) ? new UserBasic() 
                             : new UserBasic()
                                 {
-                                    Firstname = user.Firstname,
-                                    Lastname = user.Lastname,
-                                    UserName = user.Username
+                                    Firstname = user.Firstname.Trim(),
+                                    Lastname = user.Lastname.Trim(),
+                                    Username = user.Username.Trim()
                                 };
         }
 
