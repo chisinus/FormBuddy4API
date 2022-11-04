@@ -17,7 +17,19 @@ namespace FBDAL.DAL
         }
         public async Task<UserBasic> Login(string username, string password)
         {
-            throw new Exception("123");
+            if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                throw new Exception(((int)HttpStatusCode.BadRequest).ToString());
+
+            var user = await context.TblUsers.Where(u => u.Username == username && u.Password == password).FirstOrDefaultAsync();
+
+            UserBasic result = new UserBasic();
+            return (user == null) ? new UserBasic() 
+                            : new UserBasic()
+                                {
+                                    Firstname = user.Firstname,
+                                    Lastname = user.Lastname,
+                                    UserName = user.Username
+                                };
         }
 
         public async Task CreateUserAccount(UserFull user)

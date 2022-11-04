@@ -16,15 +16,12 @@ namespace FBGateway.Services
 
         public async Task<UserBasic> Login(string username, string password)
         {
-            string result = await CallService("url", "api", "data");
-            //UserBasic result = new UserBasic()
-            //{
-            //    UserName = "username",
-            //    Firstname = "firstname",
-            //    Lastname = "lasname"
-            //};
+            //string result = await CallService("url", "api", "data");
+            //JsonConvert.DeserializeObject<UserBasic>(result);
 
-            return JsonConvert.DeserializeObject<UserBasic>(result);
+            var user = await userRepository.Login(username, password);
+
+            return user;
         }
 
         public async Task CreateNewAccount(UserFull user)
